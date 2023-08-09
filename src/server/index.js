@@ -4,10 +4,13 @@ const mockAPIResponse = require('./mockAPI.js')
 var bodyParser = require('body-parser')
 var cors = require('cors')
 
+const MeaningCloud = require('meaning-cloud');
+
 const dotenv = require('dotenv');
 dotenv.config();
 
-var textapi = new meaning_cloud ({
+
+var textapi = new MeaningCloud ({
     application_key: process.env.API_KEY
 });
 
