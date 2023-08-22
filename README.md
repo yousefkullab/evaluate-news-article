@@ -39,7 +39,7 @@ The project is structured as follows:
 
 ## API Key
 
-To use the [Meaning Cloud API](https://www.meaningcloud.com/developer/sentiment-analysis), you need to sign up for an API key. Create `.env` file and add this line `API_KEY = "Your_Api_Key_From_Meaning_Cloud_Api"
+To use the [Meaning Cloud API](https://www.meaningcloud.com/developer/sentiment-analysis), you need to sign up for an API key. Create `.env` file and add this line `API_KEY = "Your_Key"`
 
 ## License
 
