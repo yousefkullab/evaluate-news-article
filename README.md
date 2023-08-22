@@ -9,31 +9,40 @@ The goal of this project is to provide a tool that analyzes the sentiment and ot
 1. Clone the repository: `git clone https://github.com/yousefkullab/evaluate-news-article.git`
 2. Navigate to the project directory: `cd evaluate-news-article`
 3. Install the project dependencies: `npm install`
-## Techniques That Use
 
-- Node.js
-- Express.js
-- HTML
-- CSS
-- JavaScript
+## Usage
 
-## Prerequisites
+- build the distribution files for development and production `npm run bulid-dev` or `npm run build-prod` 
+- Start the development server: `npm run start`
+- Open your web browser and navigate to [http://localhost:8081](http://localhost:8081) to access the application.
+- Enter the URL of the news article you want to evaluate in the provided form.
+- Submit the form to see the analysis results, including sentiment and other language-based attributes of the article.
 
-To run this app locally, you need to have the following installed on your machine:
 
-- [Node.js](https://nodejs.org/en/download) (with npm)
+## Dependencies
 
-## Installation
+This project uses the following main dependencies:
 
-- Clone this repository to your local machine using: `git clone git@github.com:YousefKullab/Weather_Journal.git`.
-- Navigate to the project folder: `cd weather-journal-app`.
-- Install the required npm packages: `npm install express body-parser cors`.
-- Start the server: `node server.js`.
-- Open your web browser and go to `http://localhost:3000` to access the app.
+
+- Express: Web server for handling requests.
+- Meaning Cloud API: Provides Natural Language Processing analysis.
+- Webpack: Bundles JavaScript and other assets for deployment.
+- Jest: Testing framework for unit testing.
+
+## Project Structure
+
+The project is structured as follows:
+
+- src/client/index.js: Entry point for the client-side JavaScript.
+- src/client/js/urlChecker.js: Contains the logic for checking the validity of the entered URL.
+- src/client/js/formHandler.js: Manages the form submission and API request.
+- src/client/views: Contains the HTML templates for the application.
+- src/client/styles: Holds the CSS styles for the application.
+- src/server/index.js: Entry point for the Express server.
 
 ## API Key
 
-To use the [OpenWeatherMap API](https://openweathermap.org/api), you need to sign up for an API key. Replace 'YOUR_API_KEY' with your actual API key in the `app.js` file.
+To use the [Meaning Cloud API](https://www.meaningcloud.com/developer/sentiment-analysis), you need to sign up for an API key. Create `.env` file and add this line `API_KEY = "Your_Api_Key_From_Meaning_Cloud_Api"   `
 
 ## License
 
