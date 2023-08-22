@@ -4,7 +4,7 @@ async function handleSubmit(event) {
     // check what text was put into the form field
     let formText = document.getElementById('article_text').value
 
-    // Client.checkUrlFunc(formText)
+    Client.checkUrlFunc(formText)
 
     console.log("::: Form Submitted :::")
     const response = await fetch('/evaluate', {

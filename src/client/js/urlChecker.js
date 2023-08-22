@@ -1,7 +1,7 @@
+const urlPattern = /^(ftp|http|https):\/\/[^ "]+$/;
+
 function checkUrlFunc(inputText) {
     console.log("::: Running urlChecker :::", inputText);
-    
-    // const urlPattern = "";
     
     if (urlPattern.test(inputText)) {
         alert("Valid URL");
