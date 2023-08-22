@@ -11,7 +11,7 @@ The goal of this project is to provide a tool that analyzes the sentiment and ot
 
 - build the distribution files for development and production `npm run bulid-dev` or `npm run build-prod` 
 - Start the development server: `npm run start`
-- Open your web browser and navigate to [http://localhost:8081](http://localhost:8081) to access the application.
+- Open your web browser and navigate to [localhost:8081](http://localhost:8081) to access the application.
 - Enter the URL of the news article you want to evaluate in the provided form.
 - Submit the form to see the analysis results, including sentiment and other language-based attributes of the article.
 
