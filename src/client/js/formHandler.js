@@ -20,18 +20,20 @@ async function handleSubmit(event) {
         console.log(data);
         displayAnalysisResults(data);
     } catch (error) {
-        console.error('Error processing response:', error);
+        console.log('Error processing response:', error);
     }
-    }
-    
+
     function displayAnalysisResults(data) {
         const resultsDiv = document.getElementById('results');
         resultsDiv.innerHTML = `
-            <p>Polarity: ${data.polarity}</p>
+            <p>Irony: ${data.irony}</p>
             <p>Subjectivity: ${data.subjectivity}</p>
-            <p>Text Snippet: ${data.sentence_list[0].text}</p>
+            <p>Text Snippet: ${formText}</p>
         `;
     }
-    
+}
+
 
 export { handleSubmit }
+
+
