@@ -33,11 +33,12 @@ app.get('/test', function (req, res) {
 
 app.post('/evaluate', async (req, res) =>{
     const article = req.body;
-    api_key: process.env.API_KEY;
-    const api_url = `https://api.meaningcloud.com/sentiment-2.1?key=${apiKey}&lang=en&txt=${encodeURIComponent(article)}`;
+    api_key = process.env.API_KEY;
+    const api_url = `https://api.meaningcloud.com/sentiment-2.1?key=${api_key}&lang=en&model=general&txt=${article}`;
 
     try{
-        const response = await fetch(api_url);
+        const fetchModule = await import('node-fetch');
+        const response = await fetchModule.default(api_url);
         const data = await response.json();
         console.log(data);
         
@@ -51,4 +52,3 @@ app.post('/evaluate', async (req, res) =>{
 app.listen(8081, function () {
     console.log('Example app listening on port 8081!')
 })
-
