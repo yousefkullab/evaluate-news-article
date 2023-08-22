@@ -1,7 +1,4 @@
 # Evaluate a News Article with Natural Language Processing
-This repository contains a project that allows you to evaluate a news article using Natural Language Processing (NLP). The project uses Webpack for bundling, an Express server for handling requests, and the Meaning Cloud API for NLP analysis.
-
-## Description
 The goal of this project is to provide a tool that analyzes the sentiment and other language-based attributes of a news article using the Meaning Cloud API's Natural Language Processing capabilities. It bundles the required JavaScript files using Webpack and utilizes an Express server to serve the application.
 
 ## Installation
@@ -42,7 +39,7 @@ The project is structured as follows:
 
 ## API Key
 
-To use the [Meaning Cloud API](https://www.meaningcloud.com/developer/sentiment-analysis), you need to sign up for an API key. Create `.env` file and add this line `API_KEY = "Your_Api_Key_From_Meaning_Cloud_Api"   `
+To use the [Meaning Cloud API](https://www.meaningcloud.com/developer/sentiment-analysis), you need to sign up for an API key. Create `.env` file and add this line `API_KEY = "Your_Api_Key_From_Meaning_Cloud_Api"
 
 ## License
 
