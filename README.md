@@ -35,11 +35,12 @@ The project is structured as follows:
 - `src/client/js/formHandler.js`: Manages the form submission and API request.
 - `src/client/views`: Contains the HTML templates for the application.
 - `src/client/styles`: Holds the CSS styles for the application.
-- `src/server/index.j`s: Entry point for the Express server.
+- `src/server/index.js`: Entry point for the Express server.
 
 ## API Key
 
 To use the [Meaning Cloud API](https://www.meaningcloud.com/developer/sentiment-analysis), you need to sign up for an API key. 
+<br>
 Create a `.env` file and add this line `API_KEY = "Your_Api_Key_From_Meaning_Cloud_Api"`
 
 ## License
