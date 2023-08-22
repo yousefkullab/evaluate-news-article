@@ -21,10 +21,10 @@ The goal of this project is to provide a tool that analyzes the sentiment and ot
 This project uses the following main dependencies:
 
 
-- Express: Web server for handling requests.
-- Meaning Cloud API: Provides Natural Language Processing analysis.
-- Webpack: Bundles JavaScript and other assets for deployment.
-- Jest: Testing framework for unit testing.
+- [Express](https://expressjs.com): Web server for handling requests.
+- [Meaning Cloud API](https://www.meaningcloud.com/developer/sentiment-analysis): Provides Natural Language Processing analysis.
+- [Webpack](https://webpack.js.org): Bundles JavaScript and other assets for deployment.
+- [Jest](https://jestjs.io): Testing framework for unit testing.
 
 ## Project Structure
 
@@ -39,7 +39,7 @@ The project is structured as follows:
 
 ## API Key
 
-To use the [Meaning Cloud API](https://www.meaningcloud.com/developer/sentiment-analysis), you need to sign up for an API key. Create `.env` file and add this line `API_KEY = "Your_Key"`
+To use the [Meaning Cloud API](https://www.meaningcloud.com/developer/sentiment-analysis), you need to sign up for an API key. Create `.env` file and add this line `API_KEY = "Your_Api_Key_From_Meaning_Cloud_Api"`
 
 ## License
 
