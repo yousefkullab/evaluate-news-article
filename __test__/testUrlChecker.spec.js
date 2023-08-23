@@ -1,29 +1,39 @@
-import { checkUrlFunc } from '../src/client/js/formHandler'; 
+import { checkUrlFunc } from '../src/client/js/urlChecker';
 
-describe('handleSubmit function', () => {
-it('should display analysis results in the results div', async () => {
-    // Mock the necessary DOM elements or functions
-    document.body.innerHTML = `
-        <form id="article-form">
-            <textarea id="article_text">Sample article text</textarea>
-        </form>
-        <div id="results"></div>
-    `;
+describe('checkUrlFunc function', () => {
+  beforeEach(() => {
+    jest.spyOn(window, 'alert').mockImplementation(() => {});
+  });
 
-    const formText = 'https://www.example.com';
-    
-    // Mock the Client object and the checkUrlFunc method
-    const mockClient = {
-        checkUrlFunc: jest.fn()
-    };
-    window.Client = mockClient;
+  afterEach(() => {
+    jest.restoreAllMocks();
+  });
 
-    // Trigger the submit event on the form
-    const form = document.getElementById('article-form');
-    form.dispatchEvent(new Event('submit'));
+  it('should display "Valid URL" for a valid URL', () => {
+    const validUrls = [
+      'http://example.com',
+      'https://www.example.com',
+      'ftp://ftp.example.com'
+    ];
 
-    // Ensure that Client.checkUrlFunc was called with the formText value
-    // expect(mockClient.checkUrlFunc).toHaveBeenCalledWith(formText);
+    validUrls.forEach(url => {
+      checkUrlFunc(url);
+      expect(window.alert).toHaveBeenCalledWith('Valid URL');
     });
-});
+  });
 
+  it('should display "Invalid URL" for an invalid URL', () => {
+    const invalidUrls = [
+      'example.com',
+      'www.example.com',
+      'ftp://ftp.example',
+      'invalid',
+      'http://'
+    ];
+
+    invalidUrls.forEach(url => {
+      checkUrlFunc(url);
+      expect(window.alert).toHaveBeenCalledWith('Invalid URL');
+    });
+  });
+});
